@@ -1,0 +1,25 @@
+# 项目相关配置
+game:
+  # 名称
+  name: L3Game
+  # 版本
+  version: 4.0.0
+  # 版权年份
+  copyrightYear: 2023
+  # 实例演示开关
+  demoEnabled: true
+  # 文件路径
+  profile: D:/liulongling/uploadPath
+  # 获取ip地址开关
+  addressEnabled: false
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为80
+  port: 8081
+ 
+# 日志配置
+logging:
+  level:
+    com.game: debug
+    org.springframework: warn
