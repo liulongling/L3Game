@@ -11,17 +11,24 @@
     <description>游戏服务器</description>
 
     <modules>
-        <!-- 新版游戏对外服 -->
+        <!-- 网通通信 -->
+        <module>backend/netty</module>
+        <!-- 业务逻辑 -->
         <module>backend/server</module>
         <module>backend/common</module>
         <module>backend/framework</module>
-        <module>backend/netty</module>
+
         <!-- 策划表数据 -->
         <module>backend/excel</module>
         <!-- 前后端数据协议 -->
         <module>backend/jproto</module>
+
         <!-- 压测&模拟客户端请求 -->
         <module>tools/client</module>
+        <!-- jprotobuf转换成proto -->
+        <module>tools/jprotobuf</module>
+        <!-- 策划表数据转换成java表结构和数据 -->
+        <module>tools/jexcel</module>
     </modules>
     <packaging>pom</packaging>
 
