@@ -12,6 +12,7 @@
 │   └── netty                                       # 对外网络通信模块
 ├── tools                                           # 工具类
 │   ├── client                                      # 压测&模拟客户端请求
+│   ├── example-server                              # 示例
 │   ├── jprotobuf                                   # jprotobuf转换成proto文件
 │   └── jexcel                                      # 策划表数据转换成java表结构和数据
 └── pom.xml                                         # 整体 maven 项目使用的 pom 文件
