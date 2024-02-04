@@ -31,6 +31,8 @@
         <module>tools/jprotobuf</module>
         <!-- 策划表数据转换成java表结构和数据 -->
         <module>tools/jexcel</module>
+        <!-- 服务端 示例 -->
+        <module>tools/example-server</module>
     </modules>
 
     <properties>

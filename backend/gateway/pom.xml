@@ -10,14 +10,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>netty</artifactId>
-
-    <description>
-        netty
-    </description>
+    <artifactId>gateway</artifactId>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.alipay.sofa/bolt -->
+        <dependency>
+            <groupId>com.game.server</groupId>
+            <artifactId>common</artifactId>
+            <version>2.0.0</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>bolt</artifactId>
@@ -34,24 +35,24 @@
             </exclusions>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+        <!-- https://mvnrepository.com/artifact/io.scalecube/scalecube-cluster -->
         <dependency>
-            <groupId>com.caucho</groupId>
-            <artifactId>hessian</artifactId>
-            <version>${hessian.version}</version>
+            <groupId>io.scalecube</groupId>
+            <artifactId>scalecube-cluster</artifactId>
+            <version>2.6.15</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <!-- https://mvnrepository.com/artifact/io.scalecube/scalecube-transport-netty -->
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>${netty.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.game.server</groupId>
-            <artifactId>jproto</artifactId>
-            <version>2.0.0</version>
-            <scope>compile</scope>
+            <groupId>io.scalecube</groupId>
+            <artifactId>scalecube-transport-netty</artifactId>
+            <version>2.6.15</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>*</artifactId>
+                    <groupId>io.netty</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
