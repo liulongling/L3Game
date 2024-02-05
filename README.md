@@ -27,3 +27,6 @@
 #### 编码风格与辅助
 遵循[阿里巴巴Java开发手册规约在线文档](https://kangroo.gitee.io/ajcg/#/)
 
+#### 架构
+![img.png](img.png)
+
