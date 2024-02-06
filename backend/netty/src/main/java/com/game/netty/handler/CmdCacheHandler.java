@@ -1,8 +1,8 @@
 package com.game.netty.handler;
 
-import com.game.jproto.ExternalMessage;
 import com.game.netty.config.ExternalGlobalConfig;
 import com.game.netty.hook.cache.ExternalCmdCache;
+import com.game.framework.message.ExternalMessage;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

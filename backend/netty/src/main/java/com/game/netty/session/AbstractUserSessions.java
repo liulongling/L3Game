@@ -3,7 +3,7 @@ package com.game.netty.session;
 
 import com.game.common.consts.ExternalJoinEnum;
 import com.game.common.kit.attr.AttrOptions;
-import com.game.netty.cmd.CmdRegions;
+import com.game.framework.cmd.CmdRegions;
 import com.game.netty.core.CmdRegionsAware;
 import com.game.netty.session.hook.UserHook;
 import io.netty.channel.ChannelFuture;

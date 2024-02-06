@@ -1,9 +1,9 @@
 package com.game.netty.session;
 
 import com.game.common.kit.attr.AttrOptions;
-import com.game.netty.cmd.CmdRegions;
-import com.game.netty.message.HeadMetadata;
-import com.game.netty.message.RequestMessage;
+import com.game.framework.cmd.CmdRegions;
+import com.game.framework.message.HeadMetadata;
+import com.game.framework.message.RequestMessage;
 import io.netty.channel.Channel;
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -1,11 +1,11 @@
 package com.game.netty.handler;
 
 import com.game.common.exception.ActionErrorEnum;
-import com.game.jproto.ExternalMessage;
 import com.game.netty.aware.UserSessionsAware;
 import com.game.netty.config.ExternalGlobalConfig;
 import com.game.netty.hook.AccessAuthenticationHook;
-import com.game.netty.kit.ExternalKit;
+import com.game.framework.kit.ExternalKit;
+import com.game.framework.message.ExternalMessage;
 import com.game.netty.session.UserSession;
 import com.game.netty.session.UserSessions;
 import com.game.netty.session.socket.SocketUserSessions;

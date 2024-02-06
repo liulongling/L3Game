@@ -1,8 +1,8 @@
 package com.game.netty.hook.cache;
 
 
-import com.game.jproto.ExternalMessage;
-import com.game.netty.message.ResponseMessage;
+import com.game.framework.message.ExternalMessage;
+import com.game.framework.message.ResponseMessage;
 
 /**
  *

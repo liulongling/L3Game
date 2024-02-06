@@ -21,8 +21,6 @@ public final class DefaultExternalServerBuilder {
 
     final DefaultExternalCoreSetting setting = new DefaultExternalCoreSetting();
 
-
-
     DefaultExternalServerBuilder(int externalCorePort) {
         this.setting.setExternalCorePort(externalCorePort);
     }

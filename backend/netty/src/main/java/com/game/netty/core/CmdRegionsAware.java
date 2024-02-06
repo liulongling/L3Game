@@ -1,7 +1,7 @@
 package com.game.netty.core;
 
 
-import com.game.netty.cmd.CmdRegions;
+import com.game.framework.cmd.CmdRegions;
 
 /**
  * @author liulongling

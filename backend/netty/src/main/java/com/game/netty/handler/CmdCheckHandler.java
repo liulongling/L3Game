@@ -1,10 +1,10 @@
 package com.game.netty.handler;
 
 import com.game.common.exception.ActionErrorEnum;
-import com.game.jproto.ExternalMessage;
-import com.game.netty.cmd.CmdRegions;
+import com.game.framework.cmd.CmdRegions;
 import com.game.netty.core.CmdRegionsAware;
-import com.game.netty.kit.ExternalKit;
+import com.game.framework.kit.ExternalKit;
+import com.game.framework.message.ExternalMessage;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

@@ -37,7 +37,8 @@ public final class DefaultExternalServer implements ExternalServer {
     public void startup() {
         // 创建与真实玩家通信的 netty 服务器
         MicroBootstrap microBootstrap = this.externalCore.createBootstrap();
-
+        // 启动与 Broker 游戏网关通信的 BrokerClient
+//        startExternalBrokerClient();
         this.setting.inject();
 
         // 启动与真实玩家通信的 netty 服务器

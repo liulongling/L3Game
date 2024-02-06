@@ -2,7 +2,7 @@ package com.game.netty.session;
 
 
 import com.game.common.kit.attr.AttrOptionDynamic;
-import com.game.netty.message.RequestMessage;
+import com.game.framework.message.RequestMessage;
 
 /**
  * UserSession 接口

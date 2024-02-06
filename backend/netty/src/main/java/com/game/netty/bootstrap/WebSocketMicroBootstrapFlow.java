@@ -3,8 +3,8 @@ package com.game.netty.bootstrap;
 
 import com.game.netty.bootstrap.handler.WebSocketVerifyHandler;
 import com.game.netty.channel.PipelineContext;
+import com.game.netty.codec.WebSocketExternalCodec;
 import com.game.netty.config.ExternalGlobalConfig;
-import com.game.netty.core.codec.WebSocketExternalCodec;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.codec.http.HttpObjectAggregator;

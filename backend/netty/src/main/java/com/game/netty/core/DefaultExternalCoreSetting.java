@@ -2,6 +2,8 @@ package com.game.netty.core;
 
 import com.game.common.consts.ExternalJoinEnum;
 import com.game.common.kit.attr.AttrOptions;
+import com.game.netty.aware.ExternalCoreSettingAware;
+import com.game.netty.aware.UserSessionsAware;
 import com.game.netty.bootstrap.MicroBootstrap;
 import com.game.netty.bootstrap.MicroBootstrapFlow;
 import com.game.netty.session.UserSessions;
@@ -25,7 +27,7 @@ import java.util.Set;
 public final class DefaultExternalCoreSetting implements ExternalCoreSetting {
     /** 动态属性 */
     final AttrOptions options = new AttrOptions();
-    /** 目前 ioGame 没有自己的容器管理 IOC/AOP，先用这个变量顶着 */
+    /** 容器管理 */
     final Set<Object> injectObject = new NonBlockingHashSet<>();
     /** 真实玩家连接的端口 */
     @Setter
@@ -45,7 +47,6 @@ public final class DefaultExternalCoreSetting implements ExternalCoreSetting {
     public void inject() {
         this.injectObject.forEach(this::aware);
     }
-
 
     @SuppressWarnings("unchecked")
     public <T> MicroBootstrapFlow<T> getMicroBootstrapFlow() {
@@ -74,6 +75,12 @@ public final class DefaultExternalCoreSetting implements ExternalCoreSetting {
 
     @Override
     public void aware(Object o) {
+        if (o instanceof UserSessionsAware aware) {
+            aware.setUserSessions(this.userSessions);
+        }
 
+        if (o instanceof ExternalCoreSettingAware aware) {
+            aware.setExternalCoreSetting(this);
+        }
     }
 }

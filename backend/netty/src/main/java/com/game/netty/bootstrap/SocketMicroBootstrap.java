@@ -14,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 与真实玩家连接的服务器，处理 tcp、websocket 的 netty 服务器。
- * <p>
  * 开发者可以继承后重写部分方法，来满足业务需求
  *
  * @author liulongling
@@ -41,7 +40,6 @@ public final class SocketMicroBootstrap extends AbstractMicroBootstrap {
         microMicroBootstrapFlow.createFlow(bootstrap);
         // 真实玩家连接的端口
         final int externalCorePort = this.setting.getExternalCorePort();
-        System.out.println("externalCorePort："+externalCorePort);
         ChannelFuture channelFuture = bootstrap.bind(externalCorePort);
 
         try {

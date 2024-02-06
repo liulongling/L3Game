@@ -39,7 +39,7 @@ public interface AccessAuthenticationHook {
      *     通过的验证，可以访问游戏逻辑服的业务方法
      * </pre>
      *
-     * @param loginSuccess true 表示玩家登录成功 {@link UserSession#isVerifyIdentity()}
+     * @param loginSuccess true 表示玩家登录成功 {@link com.game.netty.session.UserSession#isVerifyIdentity()}
      * @param cmdMerge     路由
      * @return true 通过访问验证
      */
