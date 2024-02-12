@@ -1,8 +1,8 @@
 package com.game.example;
 
-import com.game.common.kit.ExecutorKit;
-import com.game.common.kit.HashKit;
 import com.game.netty.external.ExternalServer;
+import com.iohao.game.common.kit.ExecutorKit;
+import com.iohao.game.common.kit.HashKit;
 import lombok.AccessLevel;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;

@@ -1,7 +1,7 @@
 package com.game.example;
 
-import com.game.common.consts.GameLogName;
 import com.game.netty.external.ExternalServer;
+import com.iohao.game.common.consts.IoGameLogName;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,7 +20,7 @@ import java.util.List;
 @Setter
 @Accessors(chain = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Slf4j(topic = GameLogName.CommonStdout)
+@Slf4j(topic = IoGameLogName.CommonStdout)
 public final class NettyRunOne {
     @Getter(AccessLevel.PRIVATE)
     final InternalRunOne runOne = new InternalRunOne();

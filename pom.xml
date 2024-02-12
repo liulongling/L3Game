@@ -11,14 +11,25 @@
     <description>游戏服务器</description>
 
     <modules>
+        <!-- 网络游戏框架 - 业务框架 -->
+        <module>common/common-kit</module>
+        <module>common/common-core</module>
+        <!--数据校验模块-->
+        <module>common/common-validation</module>
+        <!-- 网络游戏框架 - 网络通信 -->
+        <module>net-bolt/bolt-core</module>
+        <!-- Broker （游戏网关） -->
+        <module>net-bolt/bolt-broker-server</module>
+        <!-- BrokerClient （逻辑服） -->
+        <module>net-bolt/bolt-client</module>
+        <!-- 网络游戏框架 : 对外的服务器 （面向真实用户） -->
+        <module>net-bolt/bolt-external</module>
         <!-- 网通通信 -->
-        <module>backend/netty</module>
+        <module>external/external-netty</module>
+        <module>external/external-core</module>
         <!-- 业务逻辑 -->
         <module>backend/server</module>
         <module>backend/common</module>
-        <module>backend/framework</module>
-        <!-- 网关服 -->
-        <module>backend/gateway</module>
 
         <!-- 策划表数据 -->
         <module>backend/excel</module>
@@ -33,6 +44,10 @@
         <module>tools/jexcel</module>
         <!-- 服务端 示例 -->
         <module>tools/example-server</module>
+        <!-- 游戏部件 : 进一步减少开发实践过程中的工作量 -->
+        <module>common/common-micro-kit</module>
+        <!-- 工具 -->
+        <module>tools/other-tool</module>
     </modules>
 
     <properties>
