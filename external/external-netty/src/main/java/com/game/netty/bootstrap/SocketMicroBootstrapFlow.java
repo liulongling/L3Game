@@ -1,13 +1,38 @@
+/*
+ * ioGame
+ * Copyright (C) 2021 - 2023  渔民小镇 （262610965@qq.com、luoyizhu@gmail.com） . All Rights Reserved.
+ * # iohao.com . 渔民小镇
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 package com.game.netty.bootstrap;
 
 import com.game.netty.SettingOption;
-import com.game.netty.channel.PipelineContext;
-import com.game.netty.config.ExternalGlobalConfig;
-import com.game.netty.handler.*;
+import com.game.netty.bootstrap.handler.SocketIdleHandler;
+import com.game.netty.bootstrap.handler.SocketRequestBrokerHandler;
+import com.game.netty.handler.CmdCacheHandler;
+import com.game.netty.handler.CmdCheckHandler;
+import com.game.netty.handler.SocketCmdAccessAuthHandler;
+import com.game.netty.handler.SocketUserSessionHandler;
 import com.game.netty.pipeline.DefaultPipelineContext;
+import com.iohao.game.external.core.config.ExternalGlobalConfig;
+import com.iohao.game.external.core.hook.internal.IdleProcessSetting;
+import com.iohao.game.external.core.micro.PipelineContext;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
+import io.netty.handler.timeout.IdleStateHandler;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 
@@ -21,9 +46,11 @@ import java.util.Objects;
 abstract class SocketMicroBootstrapFlow extends AbstractMicroBootstrapFlow<ServerBootstrap> {
     @Override
     public void channelInitializer(ServerBootstrap bootstrap) {
+        System.out.println(" Test SocketMicroBootstrapFlow channelInitializer");
         bootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
             @Override
             protected void initChannel(SocketChannel ch) {
+                System.out.println(" Test SocketMicroBootstrapFlow initChannel");
                 DefaultPipelineContext pipelineContext = new DefaultPipelineContext(ch, setting);
                 /*
                  * 新建连接时的执行流程
@@ -39,6 +66,23 @@ abstract class SocketMicroBootstrapFlow extends AbstractMicroBootstrapFlow<Serve
 
     @Override
     public void pipelineIdle(PipelineContext context) {
+        IdleProcessSetting idleProcessSetting = this.setting.getIdleProcessSetting();
+        if (Objects.isNull(idleProcessSetting)) {
+            return;
+        }
+
+        // netty 心跳检测
+        context.addLast("idleStateHandler", new IdleStateHandler(
+                idleProcessSetting.getReaderIdleTime(),
+                idleProcessSetting.getWriterIdleTime(),
+                idleProcessSetting.getAllIdleTime(),
+                idleProcessSetting.getTimeUnit())
+        );
+
+        SocketIdleHandler socketIdleHandler = setting.option(SettingOption.socketIdleHandler);
+
+        // 心跳响应、心跳钩子 Handler
+        context.addLast("idleHandler", socketIdleHandler);
     }
 
     @Override
@@ -59,5 +103,9 @@ abstract class SocketMicroBootstrapFlow extends AbstractMicroBootstrapFlow<Serve
         if (Objects.nonNull(ExternalGlobalConfig.externalCmdCache)) {
             context.addLast("CmdCacheHandler", CmdCacheHandler.me());
         }
+
+        // 负责把游戏端的请求转发给 Broker（游戏网关）的 Handler
+        SocketRequestBrokerHandler socketRequestBrokerHandler = setting.option(SettingOption.socketRequestBrokerHandler);
+        context.addLast("RequestBrokerHandler", socketRequestBrokerHandler);
     }
 }

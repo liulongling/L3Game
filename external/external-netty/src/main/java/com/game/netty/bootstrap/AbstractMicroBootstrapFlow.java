@@ -1,8 +1,9 @@
 package com.game.netty.bootstrap;
 
-import com.game.netty.aware.ExternalCoreSettingAware;
 import com.game.netty.core.DefaultExternalCoreSetting;
-import com.game.netty.core.ExternalCoreSetting;
+import com.iohao.game.external.core.ExternalCoreSetting;
+import com.iohao.game.external.core.aware.ExternalCoreSettingAware;
+import com.iohao.game.external.core.micro.MicroBootstrapFlow;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 

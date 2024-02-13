@@ -1,11 +1,15 @@
 package com.game.netty.session;
 
 
-import com.game.netty.core.CmdRegionsAware;
-import com.game.netty.external.ExternalJoinEnum;
-import com.game.netty.session.hook.UserHook;
+import com.iohao.game.bolt.broker.core.aware.CmdRegionsAware;
 import com.iohao.game.common.kit.attr.AttrOptions;
 import com.iohao.game.core.common.cmd.CmdRegions;
+import com.iohao.game.external.core.config.ExternalJoinEnum;
+import com.iohao.game.external.core.hook.UserHook;
+import com.iohao.game.external.core.session.UserChannelId;
+import com.iohao.game.external.core.session.UserSession;
+import com.iohao.game.external.core.session.UserSessionOption;
+import com.iohao.game.external.core.session.UserSessions;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import lombok.AccessLevel;

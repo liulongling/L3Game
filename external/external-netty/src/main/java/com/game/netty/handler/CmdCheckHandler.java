@@ -1,7 +1,7 @@
 package com.game.netty.handler;
 
-import com.game.netty.core.CmdRegionsAware;
 import com.iohao.game.action.skeleton.core.exception.ActionErrorEnum;
+import com.iohao.game.bolt.broker.core.aware.CmdRegionsAware;
 import com.iohao.game.core.common.cmd.CmdRegions;
 import com.iohao.game.external.core.kit.ExternalKit;
 import com.iohao.game.external.core.message.ExternalMessage;

@@ -1,12 +1,12 @@
 package com.game.netty.external.join;
 
 
-import com.game.netty.bootstrap.MicroBootstrapFlow;
 import com.game.netty.bootstrap.WebSocketMicroBootstrapFlow;
 import com.game.netty.core.DefaultExternalCoreSetting;
-import com.game.netty.core.ExternalCoreSetting;
-import com.game.netty.external.ExternalJoinEnum;
 import com.iohao.game.common.kit.PresentKit;
+import com.iohao.game.external.core.ExternalCoreSetting;
+import com.iohao.game.external.core.config.ExternalJoinEnum;
+import com.iohao.game.external.core.micro.MicroBootstrapFlow;
 
 /**
  * Websocket 相关

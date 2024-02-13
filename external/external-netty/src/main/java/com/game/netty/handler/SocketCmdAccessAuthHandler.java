@@ -1,14 +1,14 @@
 package com.game.netty.handler;
 
-import com.game.netty.aware.UserSessionsAware;
-import com.game.netty.config.ExternalGlobalConfig;
-import com.game.netty.hook.AccessAuthenticationHook;
-import com.game.netty.session.UserSession;
-import com.game.netty.session.UserSessions;
-import com.game.netty.session.socket.SocketUserSessions;
+import com.game.netty.session.SocketUserSessions;
 import com.iohao.game.action.skeleton.core.exception.ActionErrorEnum;
+import com.iohao.game.external.core.aware.UserSessionsAware;
+import com.iohao.game.external.core.config.ExternalGlobalConfig;
+import com.iohao.game.external.core.hook.AccessAuthenticationHook;
 import com.iohao.game.external.core.kit.ExternalKit;
 import com.iohao.game.external.core.message.ExternalMessage;
+import com.iohao.game.external.core.session.UserSession;
+import com.iohao.game.external.core.session.UserSessions;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

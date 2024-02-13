@@ -1,10 +1,10 @@
 package com.game.netty.handler;
 
 
-import com.game.netty.aware.UserSessionsAware;
-import com.game.netty.session.UserSessions;
-import com.game.netty.session.socket.SocketUserSessions;
+import com.game.netty.session.SocketUserSessions;
 import com.iohao.game.common.consts.IoGameLogName;
+import com.iohao.game.external.core.aware.UserSessionsAware;
+import com.iohao.game.external.core.session.UserSessions;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

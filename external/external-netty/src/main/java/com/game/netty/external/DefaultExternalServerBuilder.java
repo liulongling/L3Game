@@ -1,6 +1,9 @@
 package com.game.netty.external;
 
 import com.game.netty.core.DefaultExternalCoreSetting;
+import com.iohao.game.external.core.ExternalCore;
+import com.iohao.game.external.core.ExternalServer;
+import com.iohao.game.external.core.config.ExternalJoinEnum;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,6 @@
 package com.game.example;
 
-import com.game.netty.external.ExternalServer;
+import com.iohao.game.external.core.ExternalServer;
 import lombok.AccessLevel;
 import lombok.Setter;
 import lombok.experimental.Accessors;

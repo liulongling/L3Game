@@ -1,7 +1,7 @@
 package com.game.example;
 
-import com.game.netty.external.ExternalServer;
 import com.iohao.game.common.consts.IoGameLogName;
+import com.iohao.game.external.core.ExternalServer;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,15 +1,18 @@
 package com.game.netty.external;
 
-import com.game.netty.bootstrap.MicroBootstrap;
 import com.game.netty.core.DefaultExternalCoreSetting;
-import com.game.netty.external.join.ExternalJoinSelector;
-import com.game.netty.external.join.ExternalJoinSelectors;
-import com.game.netty.hook.DefaultUserHook;
-import com.game.netty.session.UserSessionOption;
-import com.game.netty.session.UserSessions;
-import com.game.netty.session.hook.UserHook;
+import com.iohao.game.bolt.broker.core.common.IoGameGlobalConfig;
 import com.iohao.game.common.consts.IoGameLogName;
 import com.iohao.game.common.kit.PresentKit;
+import com.iohao.game.external.core.ExternalCore;
+import com.iohao.game.external.core.config.ExternalJoinEnum;
+import com.iohao.game.external.core.hook.UserHook;
+import com.iohao.game.external.core.hook.internal.DefaultUserHook;
+import com.iohao.game.external.core.micro.MicroBootstrap;
+import com.iohao.game.external.core.micro.join.ExternalJoinSelector;
+import com.iohao.game.external.core.micro.join.ExternalJoinSelectors;
+import com.iohao.game.external.core.session.UserSessionOption;
+import com.iohao.game.external.core.session.UserSessions;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
@@ -30,12 +33,18 @@ public final class DefaultExternalCore implements ExternalCore {
     }
 
     @Override
-    public MicroBootstrap createBootstrap() {
+    public MicroBootstrap createMicroBootstrap() {
         check();
 
         defaultSetting();
 
         final int externalCorePort = this.setting.getExternalCorePort();
+        if (IoGameGlobalConfig.openLog) {
+            log.info("启动游戏对外服 port: [{}] 连接方式: [{}] "
+                    , externalCorePort
+                    , setting.getExternalJoinEnum().getName());
+        }
+
         aware();
 
         // 此服务器是和真实用户连接的

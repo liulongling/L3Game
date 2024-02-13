@@ -1,8 +1,7 @@
-package com.game.netty.session.socket;
+package com.game.netty.session;
 
-import com.game.netty.session.AbstractUserSession;
-import com.game.netty.session.UserChannelId;
-import com.game.netty.session.UserSessionOption;
+import com.iohao.game.external.core.session.UserChannelId;
+import com.iohao.game.external.core.session.UserSessionOption;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 

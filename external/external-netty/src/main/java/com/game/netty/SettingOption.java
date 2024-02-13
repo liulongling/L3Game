@@ -1,6 +1,8 @@
 package com.game.netty;
 
 
+import com.game.netty.bootstrap.handler.SocketIdleHandler;
+import com.game.netty.bootstrap.handler.SocketRequestBrokerHandler;
 import com.game.netty.handler.SocketCmdAccessAuthHandler;
 import com.game.netty.handler.SocketUserSessionHandler;
 import com.iohao.game.common.kit.attr.AttrOption;
@@ -15,5 +17,10 @@ public interface SettingOption {
 
     AttrOption<SocketCmdAccessAuthHandler> socketCmdAccessAuthHandler =
             AttrOption.valueOf("SocketCmdAccessAuthHandler");
+
+    AttrOption<SocketRequestBrokerHandler> socketRequestBrokerHandler =
+            AttrOption.valueOf("SocketRequestBrokerHandler");
+
+    AttrOption<SocketIdleHandler> socketIdleHandler = AttrOption.valueOf("SocketIdleHandler");
 
 }

@@ -1,10 +1,12 @@
 package com.game.netty.external;
 
 
-import com.game.netty.bootstrap.MicroBootstrap;
 import com.game.netty.core.DefaultExternalCoreSetting;
-import com.game.netty.external.join.ExternalJoinSelector;
-import com.game.netty.external.join.ExternalJoinSelectors;
+import com.iohao.game.external.core.ExternalCore;
+import com.iohao.game.external.core.ExternalServer;
+import com.iohao.game.external.core.micro.MicroBootstrap;
+import com.iohao.game.external.core.micro.join.ExternalJoinSelector;
+import com.iohao.game.external.core.micro.join.ExternalJoinSelectors;
 
 import java.util.ServiceLoader;
 
@@ -36,9 +38,14 @@ public final class DefaultExternalServer implements ExternalServer {
     @Override
     public void startup() {
         // 创建与真实玩家通信的 netty 服务器
-        MicroBootstrap microBootstrap = this.externalCore.createBootstrap();
-        // 启动与 Broker 游戏网关通信的 BrokerClient
-//        startExternalBrokerClient();
+        MicroBootstrap microBootstrap = this.externalCore.createMicroBootstrap();
+
+        var startExternalBrokerClient = System.getProperty("ExternalBrokerClientStartup", "true");
+        if (Boolean.parseBoolean(startExternalBrokerClient)) {
+            // 启动与 Broker 游戏网关通信的 BrokerClient
+//            startExternalBrokerClient();
+        }
+
         this.setting.inject();
 
         // 启动与真实玩家通信的 netty 服务器

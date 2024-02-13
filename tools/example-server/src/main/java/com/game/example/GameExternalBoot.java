@@ -1,11 +1,11 @@
 package com.game.example;
 
 
-import com.game.netty.config.ExternalGlobalConfig;
 import com.game.netty.external.DefaultExternalServer;
 import com.game.netty.external.DefaultExternalServerBuilder;
-import com.game.netty.external.ExternalJoinEnum;
-import com.game.netty.external.ExternalServer;
+import com.iohao.game.external.core.ExternalServer;
+import com.iohao.game.external.core.config.ExternalGlobalConfig;
+import com.iohao.game.external.core.config.ExternalJoinEnum;
 
 
 public class GameExternalBoot {

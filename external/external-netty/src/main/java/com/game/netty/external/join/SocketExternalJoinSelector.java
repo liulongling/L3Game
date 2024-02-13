@@ -3,14 +3,15 @@ package com.game.netty.external.join;
 
 
 import com.game.netty.SettingOption;
-import com.game.netty.bootstrap.MicroBootstrap;
 import com.game.netty.bootstrap.SocketMicroBootstrap;
 import com.game.netty.core.DefaultExternalCoreSetting;
-import com.game.netty.core.ExternalCoreSetting;
 import com.game.netty.handler.SocketCmdAccessAuthHandler;
 import com.game.netty.handler.SocketUserSessionHandler;
-import com.game.netty.session.UserSessions;
-import com.game.netty.session.socket.SocketUserSessions;
+import com.game.netty.session.SocketUserSessions;
+import com.iohao.game.external.core.ExternalCoreSetting;
+import com.iohao.game.external.core.micro.MicroBootstrap;
+import com.iohao.game.external.core.micro.join.ExternalJoinSelector;
+import com.iohao.game.external.core.session.UserSessions;
 
 import java.util.Objects;
 

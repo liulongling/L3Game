@@ -1,9 +1,9 @@
 package com.game.netty.bootstrap.handler;
 
-import com.game.netty.aware.UserSessionsAware;
-import com.game.netty.session.UserSessions;
-import com.game.netty.session.socket.SocketUserSession;
-import com.game.netty.session.socket.SocketUserSessions;
+import com.game.netty.session.SocketUserSessions;
+import com.game.netty.session.SocketUserSession;
+import com.iohao.game.external.core.aware.UserSessionsAware;
+import com.iohao.game.external.core.session.UserSessions;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -30,6 +30,7 @@ public class WebSocketVerifyHandler extends ChannelInboundHandlerAdapter
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println(" Test WebSocketVerifyHandler channelRead");
         if (msg instanceof FullHttpRequest request) {
             // 从 uri 中解析参数
             String uri = request.uri();

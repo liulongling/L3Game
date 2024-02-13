@@ -18,7 +18,6 @@
  */
 package com.iohao.game.external.core.session;
 
-import com.iohao.game.common.kit.CollKit;
 import com.iohao.game.common.kit.attr.AttrOptionDynamic;
 import com.iohao.game.external.core.hook.UserHook;
 

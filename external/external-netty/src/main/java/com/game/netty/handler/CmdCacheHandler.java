@@ -1,7 +1,7 @@
 package com.game.netty.handler;
 
-import com.game.netty.config.ExternalGlobalConfig;
-import com.game.netty.hook.cache.ExternalCmdCache;
+import com.iohao.game.external.core.config.ExternalGlobalConfig;
+import com.iohao.game.external.core.hook.cache.ExternalCmdCache;
 import com.iohao.game.external.core.message.ExternalMessage;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

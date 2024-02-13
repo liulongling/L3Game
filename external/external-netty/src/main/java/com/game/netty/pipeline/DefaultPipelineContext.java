@@ -1,7 +1,7 @@
 package com.game.netty.pipeline;
 
-import com.game.netty.channel.PipelineContext;
 import com.game.netty.core.DefaultExternalCoreSetting;
+import com.iohao.game.external.core.micro.PipelineContext;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelPipeline;
