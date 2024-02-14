@@ -1,4 +1,4 @@
-package com.game.example;
+package com.game.example.netty;
 
 
 import com.game.netty.external.DefaultExternalServer;

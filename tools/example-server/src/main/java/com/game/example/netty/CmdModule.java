@@ -1,4 +1,4 @@
-package com.game.example;
+package com.game.example.netty;
 
 /**
  * 模块 cmd

@@ -29,7 +29,6 @@
         <module>external/external-core</module>
         <!-- 业务逻辑 -->
         <module>backend/server</module>
-        <module>backend/common</module>
 
         <!-- 策划表数据 -->
         <module>backend/excel</module>
@@ -111,7 +110,8 @@
         <jprotobuf.version>2.4.18</jprotobuf.version>
         <!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
         <protobuf-java.version>3.22.4</protobuf-java.version>
-
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+        <hutool.version>5.8.5</hutool.version>
         <!-- 后期整理需要移除的 -->
         <snakeyaml.version>1.33</snakeyaml.version>
     </properties>
