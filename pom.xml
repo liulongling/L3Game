@@ -47,6 +47,8 @@
         <module>common/common-micro-kit</module>
         <!-- 工具 -->
         <module>tools/other-tool</module>
+        <!-- 工具：生成分库分表sql -->
+        <module>tools/createsql</module>
     </modules>
 
     <properties>
