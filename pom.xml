@@ -10,8 +10,16 @@
     <name>L3Game</name>
     <description>游戏服务器</description>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <modules>
         <!-- 网络游戏框架 - 业务框架 -->
+        <module>common/common-game</module>
         <module>common/common-kit</module>
         <module>common/common-core</module>
         <!--数据校验模块-->
@@ -29,7 +37,6 @@
         <module>external/external-core</module>
         <!-- 业务逻辑 -->
         <module>backend/server</module>
-
         <!-- 策划表数据 -->
         <module>backend/excel</module>
         <!-- 前后端数据协议 -->
@@ -49,6 +56,7 @@
         <module>tools/other-tool</module>
         <!-- 工具：生成分库分表sql -->
         <module>tools/createsql</module>
+
     </modules>
 
     <properties>
@@ -99,7 +107,7 @@
         <!-- temp spring boot https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <spring.version>5.3.27</spring.version>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
-        <springboot.version>2.7.11</springboot.version>
+        <springboot.version>2.5.15</springboot.version>
         <!--  junit https://mvnrepository.com/artifact/junit/junit  -->
         <junit.version>4.13.2</junit.version>
 
@@ -116,6 +124,9 @@
         <hutool.version>5.8.5</hutool.version>
         <!-- 后期整理需要移除的 -->
         <snakeyaml.version>1.33</snakeyaml.version>
+        <!-- http://mvnrepository.com/artifact/com.alibaba/druid -->
+        <druid.version>1.2.20</druid.version>
+        <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
     </properties>
 
     <dependencies>

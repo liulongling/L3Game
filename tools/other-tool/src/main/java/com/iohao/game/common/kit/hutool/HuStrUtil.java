@@ -13,7 +13,7 @@ import java.util.function.UnaryOperator;
  * @author 渔民小镇
  * @date 2023-01-19
  */
-class HuStrUtil {
+public class HuStrUtil {
 
     public static final char C_SLASH = HuCharUtil.SLASH;
 
@@ -269,6 +269,10 @@ class HuStrUtil {
 
     public static boolean isEmpty(CharSequence str) {
         return str == null || str.length() == 0;
+    }
+
+    public static boolean isEmpty(Map map) {
+        return map == null || map.isEmpty();
     }
 
     public static String trimStart(CharSequence str) {

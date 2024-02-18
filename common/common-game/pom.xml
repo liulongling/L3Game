@@ -10,27 +10,35 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>createsql</artifactId>
+    <artifactId>common-game</artifactId>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <!--常用工具类 -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>provided</scope>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
         </dependency>
-        <!-- http://mvnrepository.com/artifact/com.alibaba/druid -->
+
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.20</version>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
+
+        <!-- JSON工具类 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.7.1</version>
+        </dependency>
+
         <dependency>
             <groupId>com.game.server</groupId>
-            <artifactId>common-game</artifactId>
+            <artifactId>common-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
+
 
 </project>

@@ -30,3 +30,4 @@
 #### 架构
 ![img.png](img.png)
 
+-DpropsConfig=D:/liulongling/work/github/L3Game/config/dev -DcommonLogPath=D:/liulongling/Log -Dopslog=D:/liulongling/Log/opslog -Dlogback.configurationFile=D:/liulongling/work/github/L3Game/config/dev/common/logback.xml
