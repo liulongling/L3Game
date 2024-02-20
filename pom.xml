@@ -10,13 +10,6 @@
     <name>L3Game</name>
     <description>游戏服务器</description>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
     <modules>
         <!-- 网络游戏框架 - 业务框架 -->
         <module>common/common-game</module>
@@ -107,7 +100,7 @@
         <!-- temp spring boot https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <spring.version>5.3.27</spring.version>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
-        <springboot.version>2.5.15</springboot.version>
+        <springboot.version>2.7.0</springboot.version>
         <!--  junit https://mvnrepository.com/artifact/junit/junit  -->
         <junit.version>4.13.2</junit.version>
 
@@ -125,7 +118,7 @@
         <!-- 后期整理需要移除的 -->
         <snakeyaml.version>1.33</snakeyaml.version>
         <!-- http://mvnrepository.com/artifact/com.alibaba/druid -->
-        <druid.version>1.2.20</druid.version>
+        <druid.version>1.2.21</druid.version>
         <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
     </properties>
 

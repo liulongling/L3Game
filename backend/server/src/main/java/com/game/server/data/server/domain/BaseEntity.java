@@ -1,4 +1,4 @@
-package com.game.server.data.common;
+package com.game.server.data.server.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
@@ -8,7 +8,6 @@ import java.util.Date;
 
 /**
  * Entity基类
- *
  *
  */
 

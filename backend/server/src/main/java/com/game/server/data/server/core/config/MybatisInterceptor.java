@@ -1,7 +1,7 @@
-package com.game.server.data.core.config;
+package com.game.server.data.server.core.config;
 
 import com.game.server.common.BeanUtils;
-import com.game.server.data.core.interceptor.MybatisInterceptorConfig;
+import com.game.server.data.server.core.interceptor.MybatisInterceptorConfig;
 import com.iohao.game.common.kit.hutool.HuStrUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.cache.CacheKey;
@@ -19,10 +19,9 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * mybatis拦截器
  *
- * @Author:liulongling
- * @Date:2022/3/8 13:51
+ * @author: liulongling
+ * @date: 2024/2/20
  */
-
 @Intercepts({
         @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class}),
         @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}),

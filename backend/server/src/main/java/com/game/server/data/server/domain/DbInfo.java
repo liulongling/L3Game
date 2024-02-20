@@ -1,7 +1,6 @@
 package com.game.server.data.server.domain;
 
 
-import com.game.server.data.common.BaseEntity;
 import lombok.Data;
 
 /**
@@ -17,12 +16,12 @@ public class DbInfo extends BaseEntity {
     /**
      * 唯一ID
      */
-    private int id;
+    private Integer id;
 
     /**
      * 1:user库 2:log 3:统计 4:gm
      */
-    private Long type;
+    private Byte type;
 
     /**
      * 可写权限数据库ip
@@ -32,7 +31,7 @@ public class DbInfo extends BaseEntity {
     /**
      * 可写权限数据库端口
      */
-    private Long writePort;
+    private Integer writePort;
 
     /**
      * 只读权限数据库ip
@@ -42,7 +41,7 @@ public class DbInfo extends BaseEntity {
     /**
      * 只读权限数据库端口
      */
-    private Long readPort;
+    private Integer readPort;
 
     /**
      * 数据库名

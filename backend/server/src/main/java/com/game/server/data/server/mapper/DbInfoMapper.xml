@@ -25,7 +25,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <select id="selectDbInfoList" parameterType="com.game.server.data.server.domain.DbInfo" resultMap="DbInfoResult">
         <include refid="selectDbInfoVo"/>
-        <where>  
+        <where>
             <if test="type != null "> and type = #{type}</if>
             <if test="writeHost != null  and writeHost != ''"> and writeHost = #{writeHost}</if>
             <if test="writePort != null "> and writePort = #{writePort}</if>
@@ -40,12 +40,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="updateTime != null "> and updateTime = #{updateTime}</if>
         </where>
     </select>
-    
+
     <select id="selectDbInfoById" parameterType="Long" resultMap="DbInfoResult">
         <include refid="selectDbInfoVo"/>
         where id = #{id}
     </select>
-        
+
     <insert id="insertDbInfo" parameterType="com.game.server.data.server.domain.DbInfo" useGeneratedKeys="true" keyProperty="id">
         insert into db_info
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -102,7 +102,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </delete>
 
     <delete id="deleteDbInfoByIds" parameterType="String">
-        delete from db_info where id in 
+        delete from db_info where id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
         </foreach>

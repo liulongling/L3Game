@@ -1,17 +1,18 @@
-package com.game.server.data.core.config;
+package com.game.server.data.server.core.config;
 
-import com.game.server.data.core.interceptor.MybatisInterceptorConfig;
-import com.game.server.data.core.interceptor.UserDesensitizationInterceptor;
+import com.alibaba.druid.pool.DruidDataSource;
+import com.game.server.data.server.core.interceptor.MybatisInterceptorConfig;
+import com.game.server.data.server.core.interceptor.UserDesensitizationInterceptor;
 import com.github.pagehelper.PageInterceptor;
-import com.zaxxer.hikari.HikariDataSource;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -19,10 +20,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * @author: liulongling
+ * @date: 2024/2/20
+ */
 @Configuration
 @MapperScan(basePackages = {"com.game.server.data.server.mapper"}, sqlSessionFactoryRef = "sqlSessionFactory")
 @EnableTransactionManagement
 public class DatabaseConfig {
+
+    @Bean(name = "sqlSessionFactory")
+    public SqlSessionFactory sqlSessionFactory(DataSourceProperties properties) throws Exception {
+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource(properties));
+        sessionFactory.setFailFast(true);
+        sessionFactory.setMapperLocations(resolver.getResources("classpath:com/game/server/data/server/mapper/*Mapper.xml"));
+        return sessionFactory.getObject();
+    }
 
     @Bean
     @ConditionalOnMissingBean
@@ -52,11 +67,9 @@ public class DatabaseConfig {
         return new UserDesensitizationInterceptor();
     }
 
-    @Bean
-    @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.hikari")
+    @Bean("serverDataSource")
     public DataSource dataSource(DataSourceProperties properties) {
-        return DataSourceBuilder.create(properties.getClassLoader()).type(HikariDataSource.class)
+        return DataSourceBuilder.create(properties.getClassLoader()).type(DruidDataSource.class)
                 .driverClassName(properties.determineDriverClassName())
                 .url(properties.determineUrl())
                 .username(properties.determineUsername())

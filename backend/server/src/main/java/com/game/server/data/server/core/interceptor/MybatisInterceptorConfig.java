@@ -1,4 +1,4 @@
-package com.game.server.data.core.interceptor;
+package com.game.server.data.server.core.interceptor;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,10 +6,9 @@ import lombok.Setter;
 /**
  * mybatis拦截器配置
  *
- * @Author:liulongling
- * @Date:2022/3/8 13:51
+ * @author: liulongling
+ * @date: 2024/2/20
  */
-
 @Getter
 @Setter
 public class MybatisInterceptorConfig {

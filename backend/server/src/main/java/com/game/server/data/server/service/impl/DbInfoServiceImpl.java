@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct;
 
 /**
  * 数据库信息Service业务层处理
- * 
+ *
  * @author liulongling
  * @date 2024-02-17
  */
@@ -48,7 +48,7 @@ public class DbInfoServiceImpl implements IDbInfoService
 
     /**
      * 查询数据库信息
-     * 
+     *
      * @param id 数据库信息主键
      * @return 数据库信息
      */
@@ -60,7 +60,7 @@ public class DbInfoServiceImpl implements IDbInfoService
 
     /**
      * 查询数据库信息列表
-     * 
+     *
      * @param dbInfo 数据库信息
      * @return 数据库信息
      */
@@ -72,7 +72,7 @@ public class DbInfoServiceImpl implements IDbInfoService
 
     /**
      * 新增数据库信息
-     * 
+     *
      * @param dbInfo 数据库信息
      * @return 结果
      */
@@ -85,7 +85,7 @@ public class DbInfoServiceImpl implements IDbInfoService
 
     /**
      * 修改数据库信息
-     * 
+     *
      * @param dbInfo 数据库信息
      * @return 结果
      */
@@ -98,7 +98,7 @@ public class DbInfoServiceImpl implements IDbInfoService
 
     /**
      * 批量删除数据库信息
-     * 
+     *
      * @param ids 需要删除的数据库信息主键
      * @return 结果
      */
@@ -110,7 +110,7 @@ public class DbInfoServiceImpl implements IDbInfoService
 
     /**
      * 删除数据库信息信息
-     * 
+     *
      * @param id 数据库信息主键
      * @return 结果
      */

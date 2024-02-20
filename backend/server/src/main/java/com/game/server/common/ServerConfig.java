@@ -12,8 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * @author: liulongling
- * @date: 2024/2/17 20:48
- * @Description:
+ * @date: 2024/2/20
  */
 @Slf4j
 public final class ServerConfig {
@@ -24,7 +23,7 @@ public final class ServerConfig {
     /**
      * 数据库信息
      */
-    public static Map<Integer, DbInfo> dbInfos = new HashMap<>();
+    public static Map<String, DbInfo> dbInfos = new HashMap<>();
 
 
     public static volatile ServerInfo serverInfo = null;
@@ -46,7 +45,7 @@ public final class ServerConfig {
 
     public static void addDBInfos(List<DbInfo> dbInfos) {
         for (DbInfo dbInfo : dbInfos) {
-            putDBInfo(dbInfo.getId(), dbInfo);
+            putDBInfo(dbInfo.getGameDBName(), dbInfo);
         }
     }
 
@@ -55,8 +54,8 @@ public final class ServerConfig {
         serverInfos.putIfAbsent(id, serverInfo);
     }
 
-    public static void putDBInfo(Integer id, DbInfo dbInfo) {
-        dbInfos.putIfAbsent(id, dbInfo);
+    public static void putDBInfo(String dbname, DbInfo dbInfo) {
+        dbInfos.putIfAbsent(dbname, dbInfo);
     }
 
     /**

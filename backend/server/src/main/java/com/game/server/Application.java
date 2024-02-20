@@ -1,12 +1,13 @@
 package com.game.server;
 
+import org.apache.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 
-@SpringBootApplication
+@SpringBootApplication(exclude = SpringBootConfiguration.class)
 @EnableScheduling
 @PropertySource(value = {
         "classpath:/application.properties"}, encoding = "UTF-8", ignoreResourceNotFound = true)

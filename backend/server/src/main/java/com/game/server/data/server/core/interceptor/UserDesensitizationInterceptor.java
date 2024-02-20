@@ -1,4 +1,4 @@
-package com.game.server.data.core.interceptor;
+package com.game.server.data.server.core.interceptor;
 
 import org.apache.ibatis.cache.CacheKey;
 import org.apache.ibatis.executor.Executor;
@@ -10,7 +10,12 @@ import org.apache.ibatis.session.RowBounds;
 
 import java.util.Properties;
 
-
+/**
+ * mybatis拦截器
+ *
+ * @author: liulongling
+ * @date: 2024/2/20
+ */
 @Intercepts({
         @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}),
         @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class, BoundSql.class}),
