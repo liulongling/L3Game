@@ -159,9 +159,9 @@ public class SqlModelProcess extends AbstractProcess {
                     for (String tableIndex : tableIndexs) {
                         String str = sql;
                         for (TableStat.Name name : tableNameSet) {
-                            if(name.getName().indexOf("`") == -1){
-                                throw new AccessException("表名请输入'`'符号!");
-                            }
+//                            if(name.getName().indexOf("`") == -1){
+//                                throw new AccessException("表名请输入'`'符号!");
+//                            }
                             String sourceTable = filterTable(name.getName(),null);
                             String replaceTable = filterTable(name.getName(),tableIndex);
                             str = StringUtils.replace(str, sourceTable, replaceTable);

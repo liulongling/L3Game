@@ -1,6 +1,6 @@
 package com.game.sql;
 
-import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson.JSON;
 import com.game.sql.execute.SqlScriptExecute;
 import com.game.sql.model.Configuration;
 import com.game.sql.model.DataBaseConfig;
@@ -28,22 +28,36 @@ import java.util.regex.Pattern;
 public class RunCreateSql {
 
     /**
-     * db配置文件 必须 @配置git地址http://git.accessgames.com/armorgirls-tools/a-tools
+     * db json配置文件
+     * 示例：
+     * {
+     *     "env": "prod",
+     *     "dbName": "game_udb",
+     *     "dbCount": 10,
+     *     "port": 3306,
+     *     "plat": "bilibili",
+     *     "game": "AG",
+     *     "remark": "示例",
+     *     "username": "root",
+     *     "password": "123456",
+     *     "ips": ["127.0.0.1"]
+     * }
+     *
      */
-    private static final String dbOriginalPath = "E:\\AG\\a-tools\\config\\ag\\china\\bili\\dbm";
+    private static final String dbOriginalPath = "D:\\liulongling\\a-tools\\config\\dbm";
     /**
      * 写入sql路径 必须
      */
-    private static final String dbTargetPath = "E:\\AG\\a-tools\\config\\ag\\china\\bili\\sql";
+    private static final String dbTargetPath = "D:\\liulongling\\a-tools\\config\\sql";
     /**
      * sql文件路径 必须
      */
     private static final String readFilePath = System.getProperty("user.dir")
-            + File.separator + "src\\main\\resources\\db\\migration\\udb";
+            + File.separator + "sql";
     /**
      * 需要创建分库分表sql文件 必须
      */
-    private static final String readSqlFileName = "V23_udb_add_jigsaw.sql";
+    private static final String readSqlFileName = "V2_createplayer.sql";
     /**
      * 生成的脚本是否执行到数据库 环境为false
      */
