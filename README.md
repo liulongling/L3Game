@@ -4,15 +4,26 @@
 .
 ├── L3Game
 ├── backend                                         # 后端服务
-│   ├── common                                      # 通用模块
 │   ├── excel                                       # 策划表和数据        
-│   ├── framework                                   # 核心框架      
-│   ├── jproto                                      # 前后端通信数据协议      
-│   ├── server                                      # 业务模块      
-│   └── netty                                       # 对外网络通信模块
+│   ├── framework                                   # 业务数据库和redis缓存框架(暂定)    
+│   ├── jproto                                      # 前后端通信数据协议
+│   └── server                                      # 逻辑业务模块 
+├── common                                          #后端服务
+│   ├── common-core                                 # 业务框架
+│   ├── common-game                                 # 业务通用工具类        
+│   ├── common-kit                                  # 业务框架      
+│   ├── common-micro-kit                            # 游戏部件 : 进一步减少开发实践过程中的工作量  
+│   └── common-validation                           # 数据校验模块
+├── example                                         #示例
+│   ├── example-broker-server                       # 网关服务
+│   ├── example-client                              # 模拟客户端访问        
+│   ├── example-db                                  # 业务数据      
+│   ├── example-jproto                              # 数据协议
+│   ├── example-netty-server                        # netty服务  
+│   └── example-server                              # 逻辑服务     
 ├── tools                                           # 工具类
 │   ├── client                                      # 压测&模拟客户端请求
-│   ├── example-server                              # 示例
+│   ├── createsql                                   # 生成多库多表sql工具
 │   ├── jprotobuf                                   # jprotobuf转换成proto文件
 │   └── jexcel                                      # 策划表数据转换成java表结构和数据
 └── pom.xml                                         # 整体 maven 项目使用的 pom 文件
@@ -30,4 +41,4 @@
 #### 架构
 ![img.png](img.png)
 
--DpropsConfig=D:/liulongling/work/github/L3Game/config/dev -DcommonLogPath=D:/liulongling/Log -Dopslog=D:/liulongling/Log/opslog -Dlogback.configurationFile=D:/liulongling/work/github/L3Game/config/dev/common/logback.xml
+[comment]: <> (-DpropsConfig=D:/liulongling/work/github/L3Game/config/dev -DcommonLogPath=D:/liulongling/Log -Dopslog=D:/liulongling/Log/opslog -Dlogback.configurationFile=D:/liulongling/work/github/L3Game/config/dev/common/logback.xml)
