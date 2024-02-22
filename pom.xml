@@ -34,6 +34,8 @@
         <module>backend/excel</module>
         <!-- 前后端数据协议 -->
         <module>backend/jproto</module>
+        <!-- 业务框架 -->
+        <module>backend/framework</module>
 
         <!-- 压测&模拟客户端请求 -->
         <module>tools/client</module>
@@ -42,7 +44,13 @@
         <!-- 策划表数据转换成java表结构和数据 -->
         <module>tools/jexcel</module>
         <!-- 服务端 示例 -->
-        <module>tools/example-server</module>
+        <module>example/example-server</module>
+        <module>example/example-netty-server</module>
+        <module>example/example-broker-server</module>
+        <module>example/example-client</module>
+        <module>example/example-db</module>
+        <module>example/example-jproto</module>
+
         <!-- 游戏部件 : 进一步减少开发实践过程中的工作量 -->
         <module>common/common-micro-kit</module>
         <!-- 工具 -->
@@ -123,6 +131,19 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
+        <!-- SpringBoot Web容器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
         <!-- lombok 简化 java 代码 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
