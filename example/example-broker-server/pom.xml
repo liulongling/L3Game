@@ -23,10 +23,5 @@
             <artifactId>bolt-broker-server</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.game.server</groupId>
-            <artifactId>jproto</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
     </dependencies>
 </project>
