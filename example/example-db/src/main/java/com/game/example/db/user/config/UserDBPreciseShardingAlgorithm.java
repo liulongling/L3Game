@@ -18,13 +18,15 @@ public class UserDBPreciseShardingAlgorithm implements PreciseShardingAlgorithm<
     @Override
     public String doSharding(final Collection<String> dbNames, final PreciseShardingValue<Integer> shardingValue) {
         log.info("UserDBPreciseShardingAlgorithm doSharding dbNames:{} value:{}", dbNames.size(), shardingValue.getValue());
+        Integer dbNameSize = dbNames.size();
         for (String dbName : dbNames) {
-            if (dbNames.size() == 1) {
+            if (dbNameSize == 1) {
                 return dbName;
             }
-            log.info("UserDBPreciseShardingAlgorithm doSharding dbName:{},value:{}", dbName, shardingValue.getValue() % dbNames.size());
-            int s = shardingValue.getValue() % dbNames.size();
+
+            Long s = shardingValue.getValue() % dbNameSize.longValue();
             if (dbName.endsWith(s < 10 ? "0" + s : s + "")) {
+                log.info("UserDBPreciseShardingAlgorithm doSharding dbName:{},value:{}", dbName, shardingValue.getValue() % dbNameSize);
                 return dbName;
             }
         }

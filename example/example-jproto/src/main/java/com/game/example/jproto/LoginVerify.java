@@ -17,6 +17,10 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PUBLIC)
 @ProtoFileMerge(fileName = GameProtoFile.COMMON_FILE_NAME, filePackage = GameProtoFile.COMMON_FILE_PACKAGE)
 public class LoginVerify {
+    /** 平台ID */
+    String platformId;
+    /** 渠道ID */
+    int channelId;
     /** jwt */
-    String jwt;
+    String platformUid;
 }

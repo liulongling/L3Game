@@ -15,12 +15,33 @@
     <dependencies>
         <dependency>
             <groupId>com.game.server</groupId>
+            <artifactId>bolt-broker-server</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.game.server</groupId>
             <artifactId>external-netty</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.game.server</groupId>
-            <artifactId>jproto</artifactId>
+            <artifactId>example-jproto</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- 模拟客户端 https://mvnrepository.com/artifact/org.java-websocket/Java-WebSocket -->
+        <dependency>
+            <groupId>org.java-websocket</groupId>
+            <artifactId>Java-WebSocket</artifactId>
+            <version>1.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.game.server</groupId>
+            <artifactId>common-game</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>

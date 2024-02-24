@@ -164,6 +164,33 @@ public class ShardingDataSourceConfig {
                 dbInfo.getWriteHost(), dbInfo.getWritePort(), dbInfo.getGameDBName()));
         result.setUsername(dbInfo.getWriteUserName());
         result.setPassword(dbInfo.getWriteUserPwd());
+//        String defaultAutoCommit = shardProperties.getProperty("defaultAutoCommit");
+//        result.setDefaultAutoCommit(StringUtils.isEmpty(defaultAutoCommit) || Boolean.parseBoolean(defaultAutoCommit));
+//        String initialSize = shardProperties.getProperty("initialSize");
+//        result.setInitialSize(!StringUtils.isEmpty(initialSize) ? Integer.parseInt(initialSize) : 3);
+//        String maxActive = shardProperties.getProperty("maxActive");
+//        result.setMaxActive(!StringUtils.isEmpty(maxActive) ? Integer.parseInt(maxActive) : 3);
+////        result.setMaxIdle(120);
+//        String minIdle = shardProperties.getProperty("minIdle");
+//        result.setMinIdle(!StringUtils.isEmpty(minIdle) ? Integer.parseInt(minIdle) : 3);
+////        result.setMaxWaitMillis(10000);
+//        result.setValidationQuery("SELECT 1");
+//        String validationQueryTimeout = shardProperties.getProperty("validationQueryTimeout");
+//        result.setValidationQueryTimeout(!StringUtils.isEmpty(validationQueryTimeout) ? Integer.parseInt(validationQueryTimeout) : 3);
+//        String testOnBorrow = shardProperties.getProperty("testOnBorrow");
+//        result.setTestOnBorrow(StringUtils.isEmpty(testOnBorrow) || Boolean.parseBoolean(testOnBorrow));
+//        String testWhileIdle = shardProperties.getProperty("testWhileIdle");
+//        result.setTestWhileIdle(StringUtils.isEmpty(testWhileIdle) || Boolean.parseBoolean(testWhileIdle));
+//        String timeBetweenEvictionRunsMillis = shardProperties.getProperty("timeBetweenEvictionRunsMillis");
+//        result.setTimeBetweenEvictionRunsMillis(!StringUtils.isEmpty(timeBetweenEvictionRunsMillis) ? Integer.parseInt(timeBetweenEvictionRunsMillis) : 10000);
+//        //result.setNumTestsPerEvictionRun(10);
+//        String minEvictableIdleTimeMillis = shardProperties.getProperty("minEvictableIdleTimeMillis");
+//        result.setMinEvictableIdleTimeMillis(!StringUtils.isEmpty(minEvictableIdleTimeMillis) ? Integer.parseInt(minEvictableIdleTimeMillis) : 120000);
+//        //result.setRemoveAbandonedOnBorrow(true);
+//        String removeAbandonedTimeout = shardProperties.getProperty("removeAbandonedTimeout");
+//        result.setRemoveAbandonedTimeout(!StringUtils.isEmpty(removeAbandonedTimeout) ? Integer.parseInt(removeAbandonedTimeout) : 120);
+//        String poolPreparedStatements = shardProperties.getProperty("poolPreparedStatements");
+//        result.setPoolPreparedStatements(StringUtils.isEmpty(poolPreparedStatements) || Boolean.parseBoolean(poolPreparedStatements));
         return result;
     }
 }

@@ -19,11 +19,11 @@ public class UserTablePreciseShardingAlgorithm implements PreciseShardingAlgorit
     public String doSharding(final Collection<String> tableNames, final PreciseShardingValue<Integer> shardingValue) {
         log.info("doSharding tables:{}", tableNames.size());
         for (String tableName : tableNames) {
-            log.info("doSharding table:{},value:{}", tableName, shardingValue.getValue());
             if (tableNames.size() == 1) {
                 return tableName;
             }
             if (tableName.endsWith(shardingValue.getValue() % 100 + "")) {
+                log.info("doSharding table:{},value:{}", tableName, shardingValue.getValue());
                 return tableName;
             }
         }

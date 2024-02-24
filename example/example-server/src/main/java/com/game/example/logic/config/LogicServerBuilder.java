@@ -21,7 +21,5 @@ public class LogicServerBuilder implements ExternalServer {
 
     @Override
     public void startup() {
-//        ServerConfig.addDBInfos(dbInfoService.selectDbInfoList(new DbInfo()));
-//        ServerConfig.addServerInfos(serverInfoService.selectServerInfoList(new ServerInfo()));
     }
 }

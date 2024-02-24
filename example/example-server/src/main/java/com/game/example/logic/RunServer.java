@@ -10,6 +10,8 @@ import com.iohao.game.bolt.broker.core.client.BrokerClient;
 import com.iohao.game.bolt.broker.core.client.BrokerClientBuilder;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.TimeZone;
+
 
 /**
  * 逻辑服启动入口
@@ -25,7 +27,7 @@ public class RunServer extends AbstractBrokerClientStartup {
         BarSkeletonBuilderParamConfig config = new BarSkeletonBuilderParamConfig()
                 // 扫描 action 类所在包
                 .scanActionPackage(LoginAction.class);
-
+        log.info("时区:" + TimeZone.getDefault());
         BarSkeletonBuilder builder = GameBarSkeletonConfig.createBuilder(config);
 
         return builder.build();

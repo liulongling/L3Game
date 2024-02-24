@@ -44,11 +44,11 @@ public class RunCreateSql {
      * }
      *
      */
-    private static final String dbOriginalPath = "D:\\liulongling\\a-tools\\config\\dbm";
+    private static final String dbOriginalPath = "D:\\liulongling\\work\\github\\L3Game\\tools\\config\\dbm";
     /**
      * 写入sql路径 必须
      */
-    private static final String dbTargetPath = "D:\\liulongling\\a-tools\\config\\sql";
+    private static final String dbTargetPath = "D:\\liulongling\\work\\github\\L3Game\\tools\\config\\sql";
     /**
      * sql文件路径 必须
      */
@@ -57,7 +57,7 @@ public class RunCreateSql {
     /**
      * 需要创建分库分表sql文件 必须
      */
-    private static final String readSqlFileName = "V2_createplayer.sql";
+    private static final String readSqlFileName = "V5_alert_player.sql";
     /**
      * 生成的脚本是否执行到数据库 环境为false
      */

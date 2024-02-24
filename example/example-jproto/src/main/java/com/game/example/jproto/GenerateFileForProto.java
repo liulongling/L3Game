@@ -19,8 +19,8 @@ public class GenerateFileForProto {
 
         String[] protoSourcePathArray = new String[]{
                 SystemUtil.getUserInfo().getCurrentDir()
-                , "backend"
-                , "jproto"
+                , "example"
+                , "example-jproto"
                 , "src"
                 , "main"
                 , "java"

@@ -1,0 +1,12 @@
+{
+    "env": "prod",
+    "dbName": "game_udb",
+    "dbCount": 10,
+    "port": 3306,
+    "plat": "bili",
+    "game": "AG",
+    "remark": "AG",
+    "username": "root",
+    "password": "123456",
+    "ips": ["127.0.0.1"]
+}
