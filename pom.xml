@@ -15,6 +15,9 @@
         <module>common/common-game</module>
         <module>common/common-kit</module>
         <module>common/common-core</module>
+        <!-- 游戏部件 : 进一步减少开发实践过程中的工作量 -->
+        <module>common/common-micro-kit</module>
+        <module>common/common-tool</module>
         <!--数据校验模块-->
         <module>common/common-validation</module>
         <!-- 网络游戏框架 - 网络通信 -->
@@ -31,6 +34,8 @@
         <!-- 业务逻辑 -->
         <module>backend/server</module>
         <!-- 策划表数据 -->
+        <module>backend/data</module>
+        <!-- 策划表数据 -->
         <module>backend/excel</module>
         <!-- 前后端数据协议 -->
         <module>backend/jproto</module>
@@ -43,18 +48,6 @@
         <module>tools/jprotobuf</module>
         <!-- 策划表数据转换成java表结构和数据 -->
         <module>tools/jexcel</module>
-        <!-- 服务端 示例 -->
-        <module>example/example-server</module>
-        <module>example/example-netty-server</module>
-        <module>example/example-broker-server</module>
-        <module>example/example-client</module>
-        <module>example/example-db</module>
-        <module>example/example-jproto</module>
-
-        <!-- 游戏部件 : 进一步减少开发实践过程中的工作量 -->
-        <module>common/common-micro-kit</module>
-        <!-- 工具 -->
-        <module>tools/other-tool</module>
         <!-- 工具：生成分库分表sql -->
         <module>tools/createsql</module>
 
