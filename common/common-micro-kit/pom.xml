@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.game.server</groupId>
-            <artifactId>other-tool</artifactId>
+            <artifactId>common-tool</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 
