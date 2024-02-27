@@ -14,13 +14,6 @@
 │   ├── common-kit                                  # 业务框架      
 │   ├── common-micro-kit                            # 游戏部件 : 进一步减少开发实践过程中的工作量  
 │   └── common-validation                           # 数据校验模块
-├── example                                         #示例
-│   ├── example-broker-server                       # 网关服务
-│   ├── example-client                              # 模拟客户端访问        
-│   ├── example-db                                  # 业务数据      
-│   ├── example-jproto                              # 数据协议
-│   ├── example-netty-server                        # netty服务  
-│   └── example-server                              # 逻辑服务     
 ├── tools                                           # 工具类
 │   ├── client                                      # 压测&模拟客户端请求
 │   ├── createsql                                   # 生成多库多表sql工具
@@ -41,4 +34,5 @@
 #### 架构
 ![img.png](img.png)
 
-[comment]: <> (-DpropsConfig=D:/liulongling/work/github/L3Game/config/dev -DcommonLogPath=D:/liulongling/Log -Dopslog=D:/liulongling/Log/opslog -Dlogback.configurationFile=D:/liulongling/work/github/L3Game/config/dev/common/logback.xml)
+#### 配置server服务启动参数：
+-DpropsConfig=D:/liulongling/work/github/L3Game/config/dev -DcommonLogPath=D:/liulongling/Log -Dlogback.configurationFile=D:/liulongling/work/github/L3Game/config/dev/common/logback.xml
