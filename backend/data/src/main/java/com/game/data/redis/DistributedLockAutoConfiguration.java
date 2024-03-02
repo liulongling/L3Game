@@ -1,4 +1,4 @@
-package com.game.framework.redis;
+package com.game.data.redis;
 
 
 import org.redisson.api.RedissonClient;

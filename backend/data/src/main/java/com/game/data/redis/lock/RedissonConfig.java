@@ -1,4 +1,4 @@
-package com.game.framework.redis.lock;
+package com.game.data.redis.lock;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

@@ -1,4 +1,4 @@
-package com.game.framework.db.user.config;
+package com.game.data.db.user.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shardingsphere.api.sharding.standard.PreciseShardingAlgorithm;

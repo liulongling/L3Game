@@ -1,4 +1,4 @@
-package com.game.framework.redis.lock;
+package com.game.data.redis.lock;
 
 import java.util.concurrent.TimeUnit;
 

@@ -1,4 +1,4 @@
-package com.game.framework.db.master.interceptor;
+package com.game.data.db.master.interceptor;
 
 import org.apache.ibatis.cache.CacheKey;
 import org.apache.ibatis.executor.Executor;

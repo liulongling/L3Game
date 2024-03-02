@@ -1,4 +1,4 @@
-package com.game.framework.db.master.interceptor;
+package com.game.data.db.master.interceptor;
 
 import lombok.Getter;
 import lombok.Setter;

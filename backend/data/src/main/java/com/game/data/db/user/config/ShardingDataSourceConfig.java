@@ -1,9 +1,9 @@
-package com.game.framework.db.user.config;
+package com.game.data.db.user.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.game.common.utils.StringUtils;
-import com.game.framework.db.common.ServerConfig;
-import com.game.framework.db.master.domain.DbInfo;
+import com.game.data.db.common.ServerConfig;
+import com.game.data.db.master.domain.DbInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.shardingsphere.api.config.sharding.KeyGeneratorConfiguration;

@@ -1,8 +1,8 @@
-package com.game.framework.db.master.config;
+package com.game.data.db.master.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.game.framework.db.master.interceptor.MybatisInterceptorConfig;
-import com.game.framework.db.master.interceptor.UserDesensitizationInterceptor;
+import com.game.data.db.master.interceptor.MybatisInterceptorConfig;
+import com.game.data.db.master.interceptor.UserDesensitizationInterceptor;
 import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;

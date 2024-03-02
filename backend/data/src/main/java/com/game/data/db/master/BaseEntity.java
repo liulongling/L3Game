@@ -1,4 +1,4 @@
-package com.game.framework.db.master;
+package com.game.data.db.master;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

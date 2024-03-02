@@ -1,4 +1,4 @@
-package com.game.framework.redis;
+package com.game.data.redis;
 
 /**
  * 带返回值的执行接口

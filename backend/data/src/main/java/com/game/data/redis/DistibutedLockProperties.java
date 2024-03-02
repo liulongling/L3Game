@@ -1,4 +1,4 @@
-package com.game.framework.redis;
+package com.game.data.redis;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
-package com.game.framework.db.master.domain;
+package com.game.data.db.master.domain;
 
-import com.game.framework.db.master.BaseEntity;
+import com.game.data.db.master.BaseEntity;
 import lombok.Data;
 
 /**

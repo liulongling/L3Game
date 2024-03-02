@@ -1,7 +1,7 @@
-package com.game.framework.db.master.config;
+package com.game.data.db.master.config;
 
 import com.game.common.utils.BeanUtils;
-import com.game.framework.db.master.interceptor.MybatisInterceptorConfig;
+import com.game.data.db.master.interceptor.MybatisInterceptorConfig;
 import com.iohao.game.common.kit.hutool.HuStrUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.cache.CacheKey;

@@ -1,7 +1,7 @@
-package com.game.framework.db.common;
+package com.game.data.db.common;
 
-import com.game.framework.db.master.domain.DbInfo;
-import com.game.framework.db.master.domain.ServerInfo;
+import com.game.data.db.master.domain.DbInfo;
+import com.game.data.db.master.domain.ServerInfo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
