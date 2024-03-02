@@ -32,15 +32,17 @@
         <module>external/external-netty</module>
         <module>external/external-core</module>
         <!-- 业务逻辑 -->
-        <module>backend/server</module>
+        <module>backend/logic-server</module>
+        <!-- 网关服 -->
+        <module>backend/broker-server</module>
+        <!-- netty服 -->
+        <module>backend/netty-server</module>
         <!-- 策划表数据 -->
         <module>backend/data</module>
         <!-- 策划表数据 -->
         <module>backend/excel</module>
         <!-- 前后端数据协议 -->
         <module>backend/jproto</module>
-        <!-- 业务框架 -->
-        <module>backend/framework</module>
 
         <!-- 压测&模拟客户端请求 -->
         <module>tools/client</module>
