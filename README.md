@@ -4,10 +4,12 @@
 .
 ├── L3Game
 ├── backend                                         # 后端服务
-│   ├── excel                                       # 策划表和数据        
-│   ├── framework                                   # 业务数据库和redis缓存框架(暂定)    
+│   ├── excel                                       # 策划表和数据
 │   ├── jproto                                      # 前后端通信数据协议
-│   └── server                                      # 逻辑业务模块 
+│   ├── data                                        # 数据库 redis数据读写
+│   ├── broker-server                               # 网关服
+│   ├── netty-server                                # netty服
+│   └── logic-server                                # 逻辑业务服
 ├── common                                          #后端服务
 │   ├── common-core                                 # 业务框架
 │   ├── common-game                                 # 业务通用工具类        
