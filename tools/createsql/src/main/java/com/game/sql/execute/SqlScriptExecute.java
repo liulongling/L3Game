@@ -153,8 +153,8 @@ public class SqlScriptExecute extends AbstractExecute {
     /**
      * 执行后sql写入到文件
      *
-     * @param file
-     * @param tableSqlModel
+     * @param file          文件名
+     * @param tableSqlModel 数据库名和sql语句
      * @throws IOException
      */
     public void writeToFile(File file, final TableSqlModel tableSqlModel) throws IOException {

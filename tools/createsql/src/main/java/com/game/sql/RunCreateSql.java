@@ -5,6 +5,7 @@ import com.game.sql.execute.SqlScriptExecute;
 import com.game.sql.model.Configuration;
 import com.game.sql.model.DataBaseConfig;
 import com.game.sql.utils.AccessFileUtils;
+import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
@@ -25,45 +26,45 @@ import java.util.regex.Pattern;
  * @date 2020/4/21 16:48
  */
 @Slf4j
+@UtilityClass
 public class RunCreateSql {
 
     /**
      * db json配置文件
      * 示例：
      * {
-     *     "env": "prod",
-     *     "dbName": "game_udb",
-     *     "dbCount": 10,
-     *     "port": 3306,
-     *     "plat": "bilibili",
-     *     "game": "AG",
-     *     "remark": "示例",
-     *     "username": "root",
-     *     "password": "123456",
-     *     "ips": ["127.0.0.1"]
+     * "env": "prod",
+     * "dbName": "game_udb",
+     * "dbCount": 10,
+     * "port": 3306,
+     * "plat": "bilibili",
+     * "game": "AG",
+     * "remark": "示例",
+     * "username": "root",
+     * "password": "123456",
+     * "ips": ["127.0.0.1"]
      * }
-     *
      */
-    private static final String dbOriginalPath = "D:\\liulongling\\work\\github\\L3Game\\tools\\config\\dbm";
+    private final String dbOriginalPath = "D:\\liulongling\\work\\github\\L3Game\\tools\\config\\dbm";
     /**
      * 写入sql路径 必须
      */
-    private static final String dbTargetPath = "D:\\liulongling\\work\\github\\L3Game\\tools\\config\\sql";
+    private final String dbTargetPath = "D:\\liulongling\\work\\github\\L3Game\\tools\\config\\sql";
     /**
      * sql文件路径 必须
      */
-    private static final String readFilePath = System.getProperty("user.dir")
+    private final String readFilePath = System.getProperty("user.dir")
             + File.separator + "sql";
     /**
      * 需要创建分库分表sql文件 必须
      */
-    private static final String readSqlFileName = "V5_alert_player.sql";
+    private final String readSqlFileName = "V5_alert_player.sql";
     /**
      * 生成的脚本是否执行到数据库 环境为false
      */
-    private static final boolean isRun = false;
+    private final boolean isRun = false;
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         String[] fileList = getFileList();
         String regEx = "[^0-9]";
         Pattern p = Pattern.compile(regEx);
@@ -74,7 +75,7 @@ public class RunCreateSql {
         }
     }
 
-    private static void run(String filePath, String version) {
+    private void run(String filePath, String version) {
         String path = readFilePath + File.separator + readSqlFileName;
         DataBaseConfig dataBaseConfig = loadLocalPluginConfiguration(filePath);
         Configuration configuration = Configuration.builder()
@@ -87,7 +88,7 @@ public class RunCreateSql {
         new SqlScriptExecute(configuration).execute();
     }
 
-    private static String[] getFileList() {
+    private String[] getFileList() {
         Path path = Paths.get(dbOriginalPath);
         if (!Files.exists(path)) {
             log.error("路径不存在!");
@@ -100,7 +101,7 @@ public class RunCreateSql {
     /**
      * 从配置文件中加载信息
      */
-    private static DataBaseConfig loadLocalPluginConfiguration(String localDBPath) {
+    private DataBaseConfig loadLocalPluginConfiguration(String localDBPath) {
         DataBaseConfig dataBaseConfig = null;
         try {
             Path path = Paths.get(localDBPath);
@@ -116,7 +117,7 @@ public class RunCreateSql {
         return dataBaseConfig;
     }
 
-    private static String readFile(String path) {
+    private String readFile(String path) {
         StringBuilder tableBuilder = new StringBuilder();
         try {
             FileReader fr = new FileReader(path);

@@ -103,7 +103,7 @@ public class SqlModelProcess extends AbstractProcess {
                     }
                     String str = sql;
                     for (TableStat.Name name : tableNameSet) {
-                        if(name.getName().indexOf("`") == -1){
+                        if (!name.getName().contains("`")) {
                             throw new AccessException("表名请输入'`'符号");
                         }
                         String sourceTable = filterTable(name.getName());
@@ -136,6 +136,12 @@ public class SqlModelProcess extends AbstractProcess {
         return tableSqlModel;
     }
 
+    /**
+     * 创建sql语句
+     *
+     * @param db 数据库0~100
+     * @return
+     */
     private TableSqlModel createTableSqlModel(int db) {
         TableSqlModel tableSqlModel = new TableSqlModel();
         tableSqlModel.setUdbName(config.getDataBaseConfig().getDbName() + "_" + (db < 10 ? "0" + db : db));
